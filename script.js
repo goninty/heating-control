@@ -12,14 +12,14 @@ $(document).ready(function() {
     
     $("#checkbox").change(function() {
         changeLook(this.checked);
+        console.log(this.checked);
         $.ajax({
             type: "POST",
             url: "http://localhost:5000/state",
             crossDomain: true,
             data: JSON.stringify({"heating": this.checked}),
-            success: function(result){
-                console.log(result);
-            } 
+            contentType: 'application/json',
+            success: function(result){}
         })
     })
 })
