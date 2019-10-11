@@ -27,11 +27,11 @@ $(document).ready(function() {
 function changeLook(state) {
     if (state === false) {
         $("#emoji").html("❄");
-        $("body").css("background-color", "dodgerblue");
+        $("body").animate({backgroundColor: "#1E90FF"}); //dodgerblue
         $("#checkbox").prop("checked", false);
     } else if (state === true) {
         $("#emoji").html("🔥");
-        $("body").css("background-color", "coral");
+        $("body").animate({backgroundColor: "#FF7F50"}); //coral
         $("#checkbox").prop("checked", true);
     }
 }
